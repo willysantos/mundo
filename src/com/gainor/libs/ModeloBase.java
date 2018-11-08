@@ -6,4 +6,6 @@ public abstract class ModeloBase {
         return null;
     }
 
+    public static String getLlavePrimaria(){return null;}
+
 }

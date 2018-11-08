@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class Database {
 
     private static final String USUARIO_DB = "root";
-    private static final String CLAVE_DB = "123456";
+    private static final String CLAVE_DB = "w1234567890d";
 
     private static Database instancia;
     private Connection conexion;

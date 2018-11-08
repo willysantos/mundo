@@ -20,6 +20,7 @@ public class City extends ModeloBase {
     public static String getNombreTabla() {
         return "city";
     }
+    public static String getLlavePrimaria(){ return "ID";}
 
     public static City encontrarPorId(int id) {
         Connection con = Database.getInstancia().getConexion();
