@@ -17,8 +17,12 @@ public class City extends ModeloBase {
     private String district;
     private int population;
 
-    public static String getNombreTabla() {
+    public String getNombreTabla() {
         return "city";
+    }
+
+    public String getLlavePrimaria() {
+        return "ID";
     }
 
     public static City encontrarPorId(int id) {
@@ -26,8 +30,9 @@ public class City extends ModeloBase {
         City ciudad = null;
         try {
             Statement sentencia = con.createStatement();
-            String sql = "SELECT * FROM " + getNombreTabla()
-                    + " WHERE ID = " + id;
+            String sql = "";
+//            String sql = "SELECT * FROM " + getNombreTabla()
+//                    + " WHERE ID = " + id;
             ResultSet resultado = sentencia.executeQuery(sql);
             if (resultado.next()) {
                 ciudad = new City();
@@ -48,7 +53,8 @@ public class City extends ModeloBase {
         ArrayList<City> lista = new ArrayList<City>();
         try {
             Statement sentencia = con.createStatement();
-            String sql = "SELECT * FROM " + getNombreTabla();
+            String sql = "";
+//            String sql = "SELECT * FROM " + getNombreTabla();
             if(limite > 0) {
                 sql += " LIMIT " + limite;
             }
